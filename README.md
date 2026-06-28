@@ -1,19 +1,33 @@
-# fractal-explorer
+# Fractal Explorer
 
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white) ![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
-
-> Mandelbrot & Julia set explorer rendered on HTML Canvas
+Interactive **Mandelbrot & Julia set** explorer — pan, zoom, and switch between fractals rendered directly on Canvas.
 
 ## Features
-- 🌀 Mandelbrot and Julia set fractals
-- 🔍 Click to zoom in, Shift+click to zoom out
-- 🎨 HSL color mapping with configurable iterations
-- 🔢 Adjustable iteration depth (20–300)
-- ⚙️ Real-time Julia set C parameter control
+
+- Mandelbrot set and Julia set renderers
+- Click-to-zoom with smooth pan
+- Adjustable iteration depth for detail control
+- Color palette selector
+- Julia set parameter tuning in real time
+
+## How it works
+
+Each pixel maps to a complex number `c`. The renderer iterates `z = z² + c` up to N times and colors the pixel based on how quickly the sequence escapes to infinity. Pixels that never escape are part of the set (colored black).
+
+## Stack
+
+![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/React-61dafb?style=flat&logo=react&logoColor=black)
+![Canvas API](https://img.shields.io/badge/Canvas_API-orange?style=flat)
+![Vite](https://img.shields.io/badge/Vite-646cff?style=flat&logo=vite&logoColor=white)
+
+## Run locally
 
 ```bash
-npm install && npm run dev
+npm install
+npm run dev
 ```
 
-## License
-[MIT](LICENSE)
+---
+
+Made by [9bzero](https://github.com/9bzero)
